@@ -31,7 +31,6 @@ symlink $DIR/.zshrc $HOME/.zshrc
 # Alacritty
 prettyecho Apply Alacritty configs
 symlink $DIR/alacritty/alacritty.toml $XDG_CONFIG_HOME/alacritty/alacritty.toml
-gitclone git@github.com:rose-pine/alacritty.git $XDG_CONFIG_HOME/alacritty/rose-pine
 
 # Tmux
 prettyecho Apply Tmux configs
@@ -54,6 +53,7 @@ symlink $DIR/vscodium/product.json $XDG_CONFIG_HOME/VSCodium/product.json
 # Xfce
 prettyecho Apply Xfce configs
 symlink $DIR/xfce4/keyboard_shortcuts.xml $XDG_CONFIG_HOME/xfce4/xfconf/xfce-perchannel-xml/xfce4-keyboard-shortcuts.xml
+symlink $DIR/xfce4/xsettings.xml $XDG_CONFIG_HOME/xfce4/xfconf/xfce-perchannel-xml/xsettings.xml
 
 # Node.js
 prettyecho Enable pnpm

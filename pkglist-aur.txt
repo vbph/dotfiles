@@ -1,10 +1,12 @@
+bibata-cursor-theme-bin
 brave-bin
 dbvis
 dropbox
-electron33
 etcher-bin
 maplemono-nf
+matcha-gtk-theme
 migrate
+papirus-icon-theme-git
 protoc-gen-go
 ttf-apple-emoji
 ttf-commissioner

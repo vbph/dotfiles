@@ -1,20 +1,20 @@
 <?xml version="1.0"?>
 <!DOCTYPE fontconfig SYSTEM "fonts.dtd">
 <fontconfig>
-    <match target="pattern">
-        <test name="family" qual="any">
-            <string>sans-serif</string>
-        </test>
-        <edit mode="assign" name="family" binding="same">
-            <string>Lato</string>
-        </edit>
-    </match>
-    <match target="pattern">
-        <test name="family" qual="any">
-            <string>monospace</string>
-        </test>
-        <edit mode="assign" name="family" binding="same">
-            <string>LySuaNongNgoaiBanCong</string>
-        </edit>
-    </match>
+  <match target="pattern">
+    <test name="family" qual="any">
+      <string>sans-serif</string>
+    </test>
+    <edit mode="assign" name="family" binding="same">
+      <string>LySuaNongNgoaiBanCong SmCn</string>
+    </edit>
+  </match>
+  <match target="pattern">
+    <test name="family" qual="any">
+      <string>monospace</string>
+    </test>
+    <edit mode="assign" name="family" binding="same">
+      <string>LySuaNongNgoaiBanCong</string>
+    </edit>
+  </match>
 </fontconfig>

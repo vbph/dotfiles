@@ -10,6 +10,11 @@ prettyecho Install everything
 prettyecho Remove packages
 sudo pacman -Rns --noconfirm ttf-liberation noto-fonts-emoji
 
+# Update mirrorlist
+yay -S --answerdiff None --answerclean None --noconfirm reflector
+sudo reflector --country Vietnam,Taiwan,India,Japan,Singapore,Thailand,Malaysia,Indonesia,China \
+    --age 12 --sort rate --protocol https --connection-timeout 20 --download-timeout 20 --save /etc/pacman.d/mirrorlist
+
 # Essential packages
 prettyecho Install packages
 yay -S --answerdiff None --answerclean None --noconfirm - <$DIR/pkglist.txt
@@ -40,7 +45,15 @@ go install github.com/grpc-ecosystem/grpc-gateway/v2/protoc-gen-openapiv2@latest
 go install google.golang.org/protobuf/cmd/protoc-gen-go@latest
 go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 
+# C#
+prettyecho Install C# tools
+dotnet tool install -g csharpier
+dotnet tool update csharpier -g
+
 # Java
 prettyecho Install Java libs
 curl -s https://get.sdkman.io | bash
 sdk install springboot
+
+# Tokyonight
+gitclone git@github.com:folke/tokyonight.nvim.git $HOME/tokyonight
