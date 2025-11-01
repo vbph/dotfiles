@@ -6,10 +6,10 @@ WINIT_X11_SCALE_FACTOR = "1.1"
 
 [font]
 size = 16
-normal = { family = "monospace", style = "Regular" }
-bold = { family = "monospace", style = "Bold" }
-italic = { family = "monospace", style = "Italic" }
-bold_italic = { family = "monospace", style = "Bold Italic" }
+normal = { family = "LySuaNongNgoaiBanCong", style = "Regular" }
+bold = { family = "LySuaNongNgoaiBanCong", style = "Bold" }
+italic = { family = "LySuaNongNgoaiBanCong", style = "Italic" }
+bold_italic = { family = "LySuaNongNgoaiBanCong", style = "Bold Italic" }
 
 [scrolling]
 history = 32768

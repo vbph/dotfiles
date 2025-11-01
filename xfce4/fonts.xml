@@ -6,7 +6,7 @@
       <string>sans-serif</string>
     </test>
     <edit mode="assign" name="family" binding="same">
-      <string>LySuaNongNgoaiBanCong SmCn</string>
+      <string>ChiecAoMeVuaDanXong SmCn</string>
     </edit>
   </match>
   <match target="pattern">

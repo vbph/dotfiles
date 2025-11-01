@@ -12,8 +12,13 @@ sudo pacman -Rns --noconfirm ttf-liberation noto-fonts-emoji
 
 # Update mirrorlist
 yay -S --answerdiff None --answerclean None --noconfirm reflector
+
 sudo reflector --country Vietnam,Taiwan,India,Japan,Singapore,Thailand,Malaysia,Indonesia,China \
-    --age 12 --sort rate --protocol https --connection-timeout 20 --download-timeout 20 --save /etc/pacman.d/mirrorlist
+    --age 12 --sort rate --protocol https --connection-timeout 20 --download-timeout 20 --verbose \
+    --save /etc/pacman.d/mirrorlist
+
+sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/endeavouros-mirrorlist
+eos-rankmirrors --use-local-mirrorlist --parallel --sort rate --verbose
 
 # Essential packages
 prettyecho Install packages

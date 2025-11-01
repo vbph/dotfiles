@@ -77,3 +77,4 @@ export CUDA_HOME=/opt/cuda
 
 # Arch
 yi() { yay -S --answerdiff None --answerclean None --noconfirm $@; }
+yu() { yay -Syu --noconfirm --answerdiff None --answerclean None; }

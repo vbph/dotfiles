@@ -2,8 +2,8 @@
 family = "LySuaNongNgoaiBanCong"
 spacing = "fontconfig-mono"
 serifs = "sans"
-noCvSs = false
-exportGlyphNames = true
+noCvSs = true
+exportGlyphNames = false
 
 [buildPlans.LySuaNongNgoaiBanCong.variants.design]
 one = "base"
@@ -92,20 +92,10 @@ shape = 900
 menu = 900
 css = 900
 
-[buildPlans.LySuaNongNgoaiBanCong.widths.Condensed]
-shape = 500
-menu = 3
-css = "condensed"
-
 [buildPlans.LySuaNongNgoaiBanCong.widths.Normal]
 shape = 600
 menu = 5
 css = "normal"
-
-[buildPlans.LySuaNongNgoaiBanCong.widths.SemiCondensed]
-shape = 548
-menu = 4
-css = "semi-condensed"
 
 [buildPlans.LySuaNongNgoaiBanCong.slopes.Upright]
 angle = 0

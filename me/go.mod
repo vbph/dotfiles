@@ -1,4 +1,4 @@
-module github.com/vbphung/dotfiles/me
+module github.com/vbph/dotfiles/me
 
 go 1.25.3
 

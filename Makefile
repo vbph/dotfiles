@@ -38,7 +38,7 @@ ssh:
 	./ssh.sh
 
 GOINSTALL := GOEXPERIMENT=loopvar GO111MODULE=on go install -ldflags="-s -w" -v
-PKG := github.com/vbphung/dotfiles/me
+PKG := github.com/vbph/dotfiles/me
 
 install-me:
 	cd $(PWD)/me && \
@@ -54,7 +54,7 @@ define build_font_func
 	git pull && \
 	npm install && \
 	cp $(CURDIR)/fonts/$(1).toml ./private-build-plans.toml && \
-	npm run build -- ttf::$(1) --jCmd=7
+	npm run build -- ttf-unhinted::$(1) --jCmd=4   
 	rm -rf fonts/$(1)
 	cp -r $(PERSONAL_DIR)/Iosevka/dist/$(1) fonts/$(1)
 endef

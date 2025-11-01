@@ -5,7 +5,7 @@
 </p>
 
 ```shell
-git clone git@github.com:vbphung/dotfiles.git $HOME/.dotfiles
+git clone git@github.com:vbph/dotfiles.git $HOME/.dotfiles
 cd $HOME/.dotfiles
 ```
 

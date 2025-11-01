@@ -3,9 +3,8 @@ brave-bin
 dbvis
 dropbox
 etcher-bin
-maplemono-nf
-matcha-gtk-theme
 migrate
+orchis-theme-git
 papirus-icon-theme-git
 protoc-gen-go
 ttf-apple-emoji

@@ -108,7 +108,7 @@
   },
   "editor.codeLens": false,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.fontFamily": "monospace",
+  "editor.fontFamily": "LySuaNongNgoaiBanCong",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
   "editor.formatOnSave": true,
