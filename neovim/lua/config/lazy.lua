@@ -19,6 +19,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 		os.exit(1)
 	end
 end
+
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
@@ -27,9 +28,10 @@ require("lazy").setup({
 			"LazyVim/LazyVim",
 			import = "lazyvim.plugins",
 			opts = {
-				colorscheme = "tokyonight-night",
+				colorscheme = "Eva-Dark-Bold",
 			},
 		},
+		{ "sharpchen/Eva-Theme.nvim" },
 		{ import = "plugins" },
 		{ import = "lazyvim.plugins.extras.formatting.prettier" },
 		{ import = "lazyvim.plugins.extras.lang.clangd" },
@@ -57,7 +59,7 @@ require("lazy").setup({
 		lazy = true,
 		version = false,
 	},
-	install = { colorscheme = { "tokyonight" } },
+	install = {},
 	checker = {
 		enabled = true,
 		notify = true,

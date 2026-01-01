@@ -1,44 +1,45 @@
 [buildPlans.ChiecAoMeVuaDanXong]
 family = "ChiecAoMeVuaDanXong"
-spacing = "normal"
+spacing = "quasi-proportional"
 serifs = "sans"
 noCvSs = true
 exportGlyphNames = false
 
 [buildPlans.ChiecAoMeVuaDanXong.variants.design]
-one = "base"
+one = "no-base"
 two = "straight-neck-serifless"
-three = "flat-top-serifless"
-four = "semi-open-serifless"
+three = "two-arcs"
+four = "semi-open-non-crossing-serifless"
 five = "oblique-arched-serifless"
 six = "open-contour"
 eight = "two-circles"
 nine = "open-contour"
-zero = "tall-slashed"
-capital-c = "serifless"
+zero = "unslashed"
 capital-d = "more-rounded-serifless"
-capital-g = "toothless-corner-serifless-hooked"
-capital-j = "flat-hook-serifed"
-capital-m = "slanted-sides-hanging-serifless"
-capital-q = "crossing-curly-tailed"
-capital-u = "toothless-corner-serifless"
-a = "double-storey-toothless-corner"
-b = "toothless-corner-serifless"
-d = "toothless-corner-serifless"
-f = "flat-hook-tailed"
-g = "single-storey-flat-hook-earless-corner"
-i = "serifed-semi-tailed"
-j = "flat-hook-serifed"
-k = "straight-serifless"
-l = "serifed-semi-tailed"
-m = "earless-corner-double-arch-serifless"
-n = "earless-corner-straight-serifless"
-p = "earless-corner-serifless"
-q = "earless-corner-straight-serifless"
-r = "earless-corner-serifless"
+capital-g = "toothless-rounded-serifless-hooked"
+capital-i = "serifless"
+capital-j = "flat-hook-serifless"
+capital-m = "flat-bottom-serifless"
+capital-q = "curly-tailed"
+capital-u = "toothless-rounded-serifless"
+capital-w = "straight-flat-top-serifless"
+a = "double-storey-serifless"
+b = "toothed-serifless"
+d = "toothed-serifless"
+f = "flat-hook-serifless"
+g = "single-storey-flat-hook-serifless"
+i = "serifless"
+j = "flat-hook-serifless"
+l = "serifless"
+m = "serifless"
+n = "straight-serifless"
+p = "eared-serifless"
+q = "straight-serifless"
+r = "compact-serifless"
 t = "flat-hook-short-neck"
-u = "toothless-corner-serifless"
-y = "cursive-flat-hook-serifless"
+u = "toothed-serifless"
+w = "straight-flat-top-serifless"
+y = "straight-serifless"
 punctuation-dot = "round"
 tilde = "low"
 asterisk = "penta-low"
@@ -49,12 +50,12 @@ ascii-single-quote = "straight"
 paren = "large-contour"
 brace = "curly-flat-boundary"
 guillemet = "straight"
-number-sign = "upright"
+number-sign = "slanted"
 ampersand = "closed"
 at = "fourfold-solid-inner"
-dollar = "through"
+dollar = "through-cap"
 percent = "rings-continuous-slash"
-question = "corner-flat-hooked"
+question = "smooth"
 micro-sign = "toothless-corner-serifless"
 lig-ltgteq = "slanted"
 lig-neq = "vertical"
@@ -67,40 +68,10 @@ lig-single-arrow-bar = "without-notch"
 [buildPlans.ChiecAoMeVuaDanXong.ligations]
 inherits = "dlig"
 
-[buildPlans.ChiecAoMeVuaDanXong.weights.Regular]
-shape = 400
-menu = 400
-css = 400
-
-[buildPlans.ChiecAoMeVuaDanXong.weights.Bold]
-shape = 700
-menu = 700
-css = 700
-
-[buildPlans.ChiecAoMeVuaDanXong.weights.ExtraLight]
-shape = 200
-menu = 200
-css = 200
-
-[buildPlans.ChiecAoMeVuaDanXong.weights.Medium]
-shape = 500
-menu = 500
-css = 500
-
-[buildPlans.ChiecAoMeVuaDanXong.weights.Heavy]
-shape = 900
-menu = 900
-css = 900
-
 [buildPlans.ChiecAoMeVuaDanXong.widths.Normal]
 shape = 600
 menu = 5
 css = "normal"
-
-[buildPlans.ChiecAoMeVuaDanXong.widths.SemiCondensed]
-shape = 548
-menu = 4
-css = "semi-condensed"
 
 [buildPlans.ChiecAoMeVuaDanXong.slopes.Upright]
 angle = 0

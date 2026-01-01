@@ -93,9 +93,6 @@
   "[zig]": {
     "editor.formatOnSave": true
   },
-  "catppuccin.accentColor": "flamingo",
-  "catppuccin.italicComments": false,
-  "catppuccin.italicKeywords": false,
   "chat.editing.confirmEditRequestRemoval": false,
   "clangd.detectExtensionConflicts": false,
   "csharpier.enableDiagnostics": false,
@@ -111,6 +108,7 @@
   "editor.fontFamily": "LySuaNongNgoaiBanCong",
   "editor.fontLigatures": true,
   "editor.fontSize": 16,
+  "editor.fontWeight": "500",
   "editor.formatOnSave": true,
   "editor.inlayHints.enabled": "off",
   "editor.minimap.enabled": false,
@@ -120,6 +118,7 @@
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "files.associations": {
+    ".clang-format": "yaml",
     ".clangd": "yaml",
     "*.conf": "shellscript",
     "*.cql": "sql",
@@ -143,6 +142,7 @@
   "jdk.java.onSave.organizeImports": false,
   "jdk.jdkhome": "/usr/local/java",
   "Lua.diagnostics.globals": ["vim"],
+  "output.smartScroll.enabled": false,
   "redhat.telemetry.enabled": false,
   "security.workspace.trust.enabled": false,
   "sqltools.format": {
@@ -151,15 +151,19 @@
   },
   "sqltools.highlightQuery": false,
   "telemetry.feedback.enabled": false,
+  "terminal.integrated.cursorStyle": "line",
+  "terminal.integrated.cursorStyleInactive": "line",
   "terminal.integrated.fontSize": 14,
-  "terminal.integrated.fontWeight": "normal",
+  "terminal.integrated.fontWeight": "500",
+  "terminal.integrated.fontWeightBold": "700",
   "vscode_custom_css.imports": [
     "file:///home/jim/.dotfiles/vscodium/style.css",
     "file:///Users/jim/.dotfiles/vscodium/style.css"
   ],
-  "workbench.colorTheme": "Tokyo Night",
+  "workbench.colorTheme": "Eva Dark Bold",
   "workbench.editor.showTabs": "single",
   "workbench.iconTheme": "material-icon-theme",
+  "workbench.panel.showLabels": false,
   "workbench.tree.indent": 20,
   "xml.validation.enabled": false,
   "zig.zls.enabled": "on"

@@ -1,0 +1,32 @@
+font-family = LySuaNongNgoaiBanCong
+font-style = SemiBold
+font-style-bold = ExtraBold
+font-size = 12
+
+theme = Nord
+background-opacity = 0.92
+background-blur-radius = 12
+
+scrollback-limit = 32768
+cursor-style = bar
+cursor-style-blink = false
+
+shell-integration-features = no-cursor
+
+confirm-close-surface = false
+quit-after-last-window-closed = true
+
+window-inherit-font-size = false
+window-decoration = true
+window-padding-balance = true
+window-padding-x = 8
+window-height = 64
+window-width = 200
+
+config-file = ?macos_override
+macos-icon = chalkboard
+macos-icon-frame = aluminum
+
+gtk-single-instance = true
+gtk-wide-tabs = false
+gtk-tabs-location = top

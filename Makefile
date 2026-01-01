@@ -18,31 +18,12 @@ cfg:
 	chmod +x ./config.sh
 	./config.sh
 
-osx-list-pkgs:
-	brew bundle dump --file=Brewfile --force
-
-osx-fresh:
-	chmod +x ./osx_fresh.sh ./osx_install.sh ./osx_config.sh
-	./osx_fresh.sh
-
-osx-install: osx-install-fonts
-	chmod +x ./osx_install.sh
-	./osx_install.sh
-
-osx-cfg:
-	chmod +x ./osx_config.sh
-	./osx_config.sh
-
 ssh:
 	chmod +x ./ssh.sh
 	./ssh.sh
 
-GOINSTALL := GOEXPERIMENT=loopvar GO111MODULE=on go install -ldflags="-s -w" -v
-PKG := github.com/vbph/dotfiles/me
-
-install-me:
-	cd $(PWD)/me && \
-	$(GOINSTALL) $(PKG)
+list-code-exts:
+	codium --list-extensions > $(PWD)/vscodium/extensions.txt
 
 PERSONAL_DIR := ~/Projects/Personal
 
@@ -54,7 +35,7 @@ define build_font_func
 	git pull && \
 	npm install && \
 	cp $(CURDIR)/fonts/$(1).toml ./private-build-plans.toml && \
-	npm run build -- ttf-unhinted::$(1) --jCmd=4   
+	npm run build -- ttf-unhinted::$(1) --jCmd=4
 	rm -rf fonts/$(1)
 	cp -r $(PERSONAL_DIR)/Iosevka/dist/$(1) fonts/$(1)
 endef
@@ -68,16 +49,16 @@ define copy_font
 	cp -r fonts/$(1) $(2)
 endef
 
-install-fonts:
+install-fonts: build-fonts
 	$(call copy_font,ChiecAoMeVuaDanXong,~/.local/share/fonts)
 	$(call copy_font,LySuaNongNgoaiBanCong,~/.local/share/fonts)
 
-osx-install-fonts:
+macos-list-pkgs:
+	brew bundle dump --file=Brewfile --force
+
+macos-install-fonts: build-fonts
 	$(call copy_font,ChiecAoMeVuaDanXong,~/Library/Fonts)
 	$(call copy_font,LySuaNongNgoaiBanCong,~/Library/Fonts)
-
-list-code-exts:
-	codium --list-extensions > $(PWD)/vscodium/extensions.txt
 
 .PHONY: \
 	list-pkgs \
@@ -85,13 +66,9 @@ list-code-exts:
 	fresh \
 	install \
 	cfg \
-	osx-list-pkgs \
-	osx-fresh \
-	osx-install \
-	osx-cfg \
 	ssh \
-	install-me \
+	list-code-exts \
 	build-fonts \
 	install-fonts \
-	osx-install-fonts \
-	list-code-exts
+	macos-list-pkgs \
+	macos-install-fonts

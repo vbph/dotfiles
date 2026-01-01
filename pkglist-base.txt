@@ -105,7 +105,6 @@ noto-fonts-extra
 nss-mdns
 ntfs-3g
 ntp
-nvidia
 nvidia-hook
 nvidia-inst
 pacman-contrib

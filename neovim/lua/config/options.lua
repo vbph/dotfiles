@@ -1,3 +1,4 @@
+vim.g.lazyvim_check_order = false
 vim.g.autoformat = true
 vim.g.snacks_animate = false
 vim.g.lazyvim_picker = "snacks"

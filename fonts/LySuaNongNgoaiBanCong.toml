@@ -22,6 +22,7 @@ capital-j = "flat-hook-serifed"
 capital-m = "slanted-sides-hanging-serifless"
 capital-q = "crossing-curly-tailed"
 capital-u = "toothless-corner-serifless"
+capital-w = "straight-almost-flat-top-serifless"
 a = "double-storey-toothless-corner"
 b = "toothless-corner-serifless"
 d = "toothless-corner-serifless"
@@ -38,6 +39,7 @@ q = "earless-corner-straight-serifless"
 r = "earless-corner-serifless"
 t = "flat-hook-short-neck"
 u = "toothless-corner-serifless"
+w = "straight-almost-flat-top-serifless"
 y = "cursive-flat-hook-serifless"
 punctuation-dot = "round"
 tilde = "low"
@@ -66,31 +68,6 @@ lig-single-arrow-bar = "without-notch"
 
 [buildPlans.LySuaNongNgoaiBanCong.ligations]
 inherits = "dlig"
-
-[buildPlans.LySuaNongNgoaiBanCong.weights.Regular]
-shape = 400
-menu = 400
-css = 400
-
-[buildPlans.LySuaNongNgoaiBanCong.weights.Bold]
-shape = 700
-menu = 700
-css = 700
-
-[buildPlans.LySuaNongNgoaiBanCong.weights.ExtraLight]
-shape = 200
-menu = 200
-css = 200
-
-[buildPlans.LySuaNongNgoaiBanCong.weights.Medium]
-shape = 500
-menu = 500
-css = 500
-
-[buildPlans.LySuaNongNgoaiBanCong.weights.Heavy]
-shape = 900
-menu = 900
-css = 900
 
 [buildPlans.LySuaNongNgoaiBanCong.widths.Normal]
 shape = 600

@@ -1,10 +1,11 @@
 #!/bin/sh
 
+OS=$(uname -s)
 DIR=$(pwd)
 
 source $DIR/utils.sh
 
-prettyecho Setup your Arch
+prettyecho Setup your $OS
 
 # Create directories
 prettyecho Create directories

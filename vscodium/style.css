@@ -1,5 +1,5 @@
 :root {
-  --ui-font-family: ChiecAoMeVuaDanXong SmCn, monospace;
+  --ui-font-family: ChiecAoMeVuaDanXong;
   --ui-font-weight: 400;
   --ui-font-style: normal;
 }
@@ -15,7 +15,6 @@
 .monaco-hover {
   padding: 8px !important;
   border-radius: 16px !important;
-  border: none !important;
 }
 
 .monaco-workbench
@@ -25,7 +24,6 @@
   > .window-title
   > .command-center
   .action-item.command-center-center {
-  border: none !important;
   background: transparent !important;
 }
 
@@ -68,7 +66,6 @@
   font-style: var(--ui-font-style) !important;
   border-radius: 8px !important;
   padding: 4px !important;
-  border: none !important;
   margin-bottom: 4px !important;
 }
 
@@ -105,11 +102,6 @@
 #status\.editor\.selection,
 #be5invis\.vscode-custom-css,
 .action-label.codicon.codicon-accounts-view-bar-icon,
-.action-label.codicon.codicon-settings-view-bar-icon,
-.composite.title.has-composite-bar .title-actions * {
+.action-label.codicon.codicon-settings-view-bar-icon {
   display: none !important;
-}
-
-* {
-  border-color: transparent !important;
 }

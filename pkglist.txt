@@ -1,4 +1,3 @@
-alacritty
 aspnet-runtime
 blueman
 bluez
@@ -20,6 +19,7 @@ fcitx5-pinyin-zhwiki
 fcitx5-qt
 fcitx5-unikey
 fmt
+ghostty
 git
 gnome-keyring
 gradle
@@ -31,6 +31,7 @@ libreoffice-still
 neovim
 nodejs
 npm
+nvidia-open
 nvm
 obsidian
 opencv

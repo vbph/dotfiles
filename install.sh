@@ -1,29 +1,55 @@
 #!/bin/sh
 
+OS=$(uname -s)
 DIR=$(pwd)
 
 source $DIR/utils.sh
 
 prettyecho Install everything
 
-# Remove packages
-prettyecho Remove packages
-sudo pacman -Rns --noconfirm ttf-liberation noto-fonts-emoji
+if [ $OS = Linux ]; then
 
-# Update mirrorlist
-yay -S --answerdiff None --answerclean None --noconfirm reflector
+    # Remove packages
+    prettyecho Remove packages
+    sudo pacman -Rns --noconfirm ttf-liberation noto-fonts-emoji
 
-sudo reflector --country Vietnam,Taiwan,India,Japan,Singapore,Thailand,Malaysia,Indonesia,China \
-    --age 12 --sort rate --protocol https --connection-timeout 20 --download-timeout 20 --verbose \
-    --save /etc/pacman.d/mirrorlist
+    # Update mirrorlist
+    yay -S --answerdiff None --answerclean None --noconfirm reflector
 
-sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/endeavouros-mirrorlist
-eos-rankmirrors --use-local-mirrorlist --parallel --sort rate --verbose
+    sudo reflector \
+        --country Vietnam,Taiwan,India,Japan,Singapore,Thailand,Malaysia,Indonesia,China \
+        --age 12 \
+        --sort rate \
+        --protocol https \
+        --connection-timeout 20 \
+        --download-timeout 20 \
+        --verbose \
+        --save /etc/pacman.d/mirrorlist
 
-# Essential packages
-prettyecho Install packages
-yay -S --answerdiff None --answerclean None --noconfirm - <$DIR/pkglist.txt
-yay -S --answerdiff None --answerclean None --noconfirm - <$DIR/pkglist-aur.txt
+    sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/endeavouros-mirrorlist
+    eos-rankmirrors --use-local-mirrorlist --parallel --sort rate --verbose
+
+    # Essential packages
+    prettyecho Install packages
+    yay -S --answerdiff None --answerclean None --noconfirm - <$DIR/pkglist.txt
+    yay -S --answerdiff None --answerclean None --noconfirm - <$DIR/pkglist-aur.txt
+
+elif [ $OS = Darwin ]; then
+
+    # Command Line Tools
+    prettyecho Install Command Line Tools
+    xcode-select --install
+
+    # Homebrew
+    prettyecho Install Homebrew
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+    export PATH=$PATH:/opt/homebrew/bin
+
+    # Homebrew packages
+    prettyecho Install Homebrew packages
+    brew bundle --file=$DIR/Brewfile
+
+fi
 
 # Oh-My-Zsh
 prettyecho Install Oh-My-Zsh
@@ -53,12 +79,4 @@ go install google.golang.org/grpc/cmd/protoc-gen-go-grpc@latest
 # C#
 prettyecho Install C# tools
 dotnet tool install -g csharpier
-dotnet tool update csharpier -g
-
-# Java
-prettyecho Install Java libs
-curl -s https://get.sdkman.io | bash
-sdk install springboot
-
-# Tokyonight
-gitclone git@github.com:folke/tokyonight.nvim.git $HOME/tokyonight
+dotnet tool update -g csharpier
