@@ -1,6 +1,10 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap");
+
 :root {
-  --fontStack-monospace: monospace !important;
-  --fontStack-sansSerif: sans-serif !important;
-  --fontStack-sansSerifDisplay: sans-serif !important;
-  --fontStack-system: sans-serif !important;
+  --vbph-monospace: ChiecAoMeVuaDanXong, "Roboto Mono", monospace;
+  --vbph-text: LySuaNongNgoaiBanCong, "Roboto Mono", sans-serif;
+  --fontStack-monospace: var(--vbph-monospace) !important;
+  --fontStack-sansSerif: var(--vbph-text) !important;
+  --fontStack-sansSerifDisplay: var(--vbph-text) !important;
+  --fontStack-system: var(--vbph-text) !important;
 }

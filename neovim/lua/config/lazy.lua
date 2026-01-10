@@ -43,7 +43,6 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.lang.helm" },
 		{ import = "lazyvim.plugins.extras.lang.java" },
 		{ import = "lazyvim.plugins.extras.lang.json" },
-		{ import = "lazyvim.plugins.extras.lang.nix" },
 		{ import = "lazyvim.plugins.extras.lang.ruby" },
 		{ import = "lazyvim.plugins.extras.lang.rust" },
 		{ import = "lazyvim.plugins.extras.lang.sql" },
@@ -52,7 +51,7 @@ require("lazy").setup({
 		{ import = "lazyvim.plugins.extras.lang.typescript" },
 		{ import = "lazyvim.plugins.extras.lang.yaml" },
 		{ import = "lazyvim.plugins.extras.lang.zig" },
-		{ import = "lazyvim.plugins.extras.lang.omnisharp" },
+		{ import = "lazyvim.plugins.extras.lang.dotnet" },
 		{ import = "lazyvim.plugins.extras.editor.neo-tree" },
 	},
 	defaults = {

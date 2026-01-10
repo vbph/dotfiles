@@ -1,0 +1,4 @@
+interface:
+  display_name: "Format Dotfiles"
+  short_description: "Safely clean formatting in dotfiles repos"
+  default_prompt: "Use $format-dotfiles to review and safely clean formatting issues in this repository."

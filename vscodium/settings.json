@@ -88,7 +88,8 @@
     "editor.formatOnSave": true
   },
   "[xml]": {
-    "editor.defaultFormatter": "csharpier.csharpier-vscode"
+    "editor.defaultFormatter": "csharpier.csharpier-vscode",
+    "editor.formatOnSave": true
   },
   "[zig]": {
     "editor.formatOnSave": true
@@ -96,6 +97,7 @@
   "chat.editing.confirmEditRequestRemoval": false,
   "clangd.detectExtensionConflicts": false,
   "csharpier.enableDiagnostics": false,
+  "cSpell.userWords": ["pacman"],
   "diffEditor.ignoreTrimWhitespace": false,
   "docker.lsp.experimental.vulnerabilityScanning": false,
   "docker.lsp.telemetry": "off",

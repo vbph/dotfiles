@@ -1,10 +1,34 @@
-list-pkgs:
+UNAME_S := $(shell uname -s)
+
+ifeq ($(UNAME_S),Darwin)
+
+FONT_DIR := ~/Library/Fonts
+define list_pkgs_cmd
+	brew bundle dump --file=Brewfile --force --no-describe
+endef
+define base_pkgs_cmd
+	@fortune | cowsay | lolcat
+endef
+
+else
+
+FONT_DIR := ~/.local/share/fonts
+define list_pkgs_cmd
 	comm -23 <(pacman -Qqen | sort) <(sort pkglist-base.txt) > pkglist.txt
 	pacman -Qmq > pkglist-aur.txt
-
-base-pkgs:
+endef
+define base_pkgs_cmd
 	comm -23 <(pacman -Qqen | sort) <(sort pkglist.txt) > tmp.txt && \
 	mv tmp.txt pkglist-base.txt
+endef
+
+endif
+
+list-pkgs:
+	$(list_pkgs_cmd)
+
+base-pkgs:
+	$(base_pkgs_cmd)
 
 fresh:
 	chmod +x ./fresh.sh ./install.sh ./config.sh
@@ -50,15 +74,8 @@ define copy_font
 endef
 
 install-fonts: build-fonts
-	$(call copy_font,ChiecAoMeVuaDanXong,~/.local/share/fonts)
-	$(call copy_font,LySuaNongNgoaiBanCong,~/.local/share/fonts)
-
-macos-list-pkgs:
-	brew bundle dump --file=Brewfile --force
-
-macos-install-fonts: build-fonts
-	$(call copy_font,ChiecAoMeVuaDanXong,~/Library/Fonts)
-	$(call copy_font,LySuaNongNgoaiBanCong,~/Library/Fonts)
+	$(call copy_font,ChiecAoMeVuaDanXong,$(FONT_DIR))
+	$(call copy_font,LySuaNongNgoaiBanCong,$(FONT_DIR))
 
 .PHONY: \
 	list-pkgs \

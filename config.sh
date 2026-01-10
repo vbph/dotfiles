@@ -76,7 +76,7 @@ if [ $OS = Linux ]; then
     CODE_BIN=/opt/vscodium-bin
     CODE_CONFIG=$CONFIG_HOME/VSCodium
 elif [ $OS = Darwin ]; then
-    CODE_BIN=/Applications/VSCodium.app/Contents/MacOS/Electron
+    CODE_BIN=/Applications/VSCodium.app/Contents/MacOS/VSCodium
     CODE_CONFIG=$MACOS_APP_SUPPORT/VSCodium
 fi
 

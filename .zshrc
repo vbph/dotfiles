@@ -13,28 +13,17 @@ source $ZSH/oh-my-zsh.sh
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-# Brew
-export PATH=/opt/homebrew/bin:$PATH
-
-# Go
-export GOPRIVATE=*
-export GOPATH=$HOME/go
-export PATH=$GOPATH/bin:$PATH
-
-# Rust
-export PATH=$HOME/.cargo/bin:$PATH
-
 # Directories
 alias dots=$HOME/.dotfiles
 alias proj=$HOME/Projects
 alias psn=$HOME/Projects/Personal
 alias keys=$HOME/Projects/Keys
-alias dropbox=$HOME/Dropbox
 
 # Shortcuts
 alias t=$HOME/.tmux.sh
 alias v=nvim
-alias c=codium
+alias c="codium ."
+alias aa=codex
 
 # Docker
 alias dcup="docker-compose up --detach --build"
@@ -54,6 +43,19 @@ export PYENV_ROOT=$HOME/.pyenv
 [[ -d $PYENV_ROOT/bin ]] && export PATH=$PYENV_ROOT/bin:$PATH
 eval "$(pyenv init - zsh)"
 
+# Go
+export GOPRIVATE=*
+export GOPATH=$HOME/go
+export PATH=$GOPATH/bin:$PATH
+
+# Rust
+export PATH=$HOME/.cargo/bin:$PATH
+
+# Dotnet
+export PATH=$HOME/.dotnet/tools:$PATH
+alias dnb="dotnet build --interactive -verbosity diag"
+alias dnr="dotnet run --interactive -verbosity diag"
+
 # Clang
 export PATH=/opt/homebrew/opt/llvm/bin:$PATH
 cpprun() { clang++ -std=c++17 $1 -o out && ./out && rm -rf ./out; }
@@ -69,6 +71,17 @@ export SDKMAN_DIR=$HOME/.sdkman
 export CUDA_HOME=/opt/cuda
 export PATH=/opt/cuda/bin:$PATH
 
-# Arch
-yi() { yay -S --answerdiff None --answerclean None --noconfirm $@; }
-yu() { yay -Syu --noconfirm --answerdiff None --answerclean None; }
+# Packages
+case $(uname -s) in
+Linux)
+    pi() { yay -S --answerdiff None --answerclean None --noconfirm $@; }
+    pu() { yay -Syu --noconfirm --answerdiff None --answerclean None; }
+    ;;
+Darwin)
+    export PATH=/opt/homebrew/bin:$PATH
+
+    pi() { brew install $@; }
+    pd() { brew uninstall $@ && brew autoremove && brew cleanup; }
+    pu() { brew update && brew upgrade --greedy --yes && brew cleanup; }
+    ;;
+esac
