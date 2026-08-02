@@ -1,0 +1,29 @@
+layout {
+    pane size=1 borderless=true {
+        plugin location="status-bar"
+    }
+
+    pane size=1 borderless=true {
+        plugin location="https://github.com/dj95/zjstatus/releases/latest/download/zjstatus.wasm" {
+            format_left  "#[fg=white,bold] [{session}] {tabs}"
+            format_right "{datetime}"
+
+            mode_normal "#[fg=green,bold]"
+
+            tab_normal               "#[fg=black,bg=white] [{index}] {name} #[fg=white,bg=black]"
+            tab_normal_fullscreen    "#[fg=black,bg=white] [{index}] {name} [] #[fg=white,bg=black]"
+            tab_normal_sync          "#[fg=black,bg=white] [{index}] {name} <> #[fg=white,bg=black]"
+            tab_normal_bell          "#[fg=black,bg=yellow] [{index}] {name} ! #[fg=yellow,bg=black]"
+            tab_normal_flashing_bell "#[fg=white,bg=red,bold] [{index}] {name} ! #[fg=red,bg=black]"
+            tab_active               "#[fg=black,bg=green,bold] [{index}] {name} #[fg=green,bg=black]"
+            tab_active_fullscreen    "#[fg=black,bg=green,bold] [{index}] {name} [] #[fg=green,bg=black]"
+            tab_active_sync          "#[fg=black,bg=green,bold] [{index}] {name} <> #[fg=green,bg=black]"
+
+            datetime          "#[fg=white,bold] {format}"
+            datetime_format   "%H:%M %d/%m/%Y"
+            datetime_timezone "Asia/Ho_Chi_Minh"
+        }
+    }
+
+    pane
+}

@@ -65,6 +65,11 @@ prettyecho Apply Tmux configs
 symlink $DIR/tmux/.tmux.conf $HOME/.tmux.conf
 symlink $DIR/tmux/.tmux.sh $HOME/.tmux.sh
 
+# Zellij
+prettyecho Apply Zellij configs
+symlink $DIR/zellij/config.kdl $CONFIG_HOME/zellij/config.kdl
+symlink $DIR/zellij/bygone_days.kdl $CONFIG_HOME/zellij/layouts/bygone_days.kdl
+
 # Neovim
 prettyecho Apply Neovim configs
 symlink $DIR/neovim $CONFIG_HOME/nvim

@@ -97,7 +97,7 @@
   "chat.editing.confirmEditRequestRemoval": false,
   "clangd.detectExtensionConflicts": false,
   "csharpier.enableDiagnostics": false,
-  "cSpell.userWords": ["pacman"],
+  "cSpell.userWords": ["nord", "pacman"],
   "diffEditor.ignoreTrimWhitespace": false,
   "docker.lsp.experimental.vulnerabilityScanning": false,
   "docker.lsp.telemetry": "off",

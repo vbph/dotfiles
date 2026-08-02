@@ -18,9 +18,12 @@ alias dots=$HOME/.dotfiles
 alias proj=$HOME/Projects
 alias psn=$HOME/Projects/Personal
 alias keys=$HOME/Projects/Keys
+alias dropbox=$HOME/Library/CloudStorage/Dropbox
+alias icloud="$HOME/Library/Mobile\ Documents/com\~apple\~CloudDocs"
 
 # Shortcuts
 alias t=$HOME/.tmux.sh
+alias z=zellij
 alias v=nvim
 alias c="codium ."
 alias aa=codex
